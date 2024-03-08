@@ -4,7 +4,6 @@ import { HydratedDocument, Model } from "mongoose";
 
 export type UserDocument = HydratedDocument<User>;
 
-
 @Schema() // decorator
 export class User{
     @Prop()
@@ -15,6 +14,9 @@ export class User{
 
     @Prop()
     description: string;
+
+    @Prop()
+    otp: string;
     
     @Prop({defaultValue: Date.now})
     date_added: Date;
